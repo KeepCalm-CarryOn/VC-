@@ -1,0 +1,39 @@
+﻿生成启动时间为 2018/7/26 11:18:18。
+     1>项目“C:\Users\Administrator.J5754W20LOER6YS\Desktop\VC++\VC++(11)\VC++(10)\app\app\app.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\蓝牙卡测试工具.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         所有输出均为最新。
+         D:\VS\VC\bin\CL.exe /c /IC:\Users\Administrator.J5754W20LOER6YS\Desktop\VC++\app\app /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\蓝牙卡测试工具.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt app.cpp appDlg.cpp
+         appDlg.cpp
+     1>c:\users\administrator.j5754w20loer6ys\desktop\vc++\vc++(11)\vc++(10)\app\app\appdlg.cpp(218): warning C4244: “=”: 从“short”转换到“unsigned char”，可能丢失数据
+     1>c:\users\administrator.j5754w20loer6ys\desktop\vc++\vc++(11)\vc++(10)\app\app\appdlg.cpp(241): warning C4244: “=”: 从“short”转换到“unsigned char”，可能丢失数据
+     1>c:\users\administrator.j5754w20loer6ys\desktop\vc++\vc++(11)\vc++(10)\app\app\appdlg.cpp(255): warning C4244: “=”: 从“short”转换到“unsigned char”，可能丢失数据
+     1>c:\users\administrator.j5754w20loer6ys\desktop\vc++\vc++(11)\vc++(10)\app\app\appdlg.cpp(281): warning C4244: “=”: 从“short”转换到“unsigned char”，可能丢失数据
+     1>c:\users\administrator.j5754w20loer6ys\desktop\vc++\vc++(11)\vc++(10)\app\app\appdlg.cpp(303): warning C4244: “=”: 从“short”转换到“unsigned char”，可能丢失数据
+         app.cpp
+         正在生成代码...
+       ResourceCompile:
+         所有输出均为最新。
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         D:\VS\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator.J5754W20LOER6YS\Desktop\VC++\VC++(11)\VC++(10)\app\Debug\蓝牙卡测试工具.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\Administrator.J5754W20LOER6YS\Desktop\VC++\app\app Mwic_32.lib /MANIFEST /ManifestFile:"Debug\蓝牙卡测试工具.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Administrator.J5754W20LOER6YS\Desktop\VC++\VC++(11)\VC++(10)\app\Debug\蓝牙卡测试工具.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator.J5754W20LOER6YS\Desktop\VC++\VC++(11)\VC++(10)\app\Debug\蓝牙卡测试工具.lib" /MACHINE:X86 Debug\app.res
+         "Debug\蓝牙卡测试工具.exe.embed.manifest.res"
+         Debug\app.obj
+         Debug\appDlg.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\蓝牙卡测试工具.exe.embed.manifest" /manifest "Debug\蓝牙卡测试工具.exe.intermediate.manifest" D:\VS\VC\Include\Manifest\dpiaware.manifest
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         app.vcxproj -> C:\Users\Administrator.J5754W20LOER6YS\Desktop\VC++\VC++(11)\VC++(10)\app\Debug\蓝牙卡测试工具.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\蓝牙卡测试工具.unsuccessfulbuild”。
+         正在对“Debug\蓝牙卡测试工具.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\Administrator.J5754W20LOER6YS\Desktop\VC++\VC++(11)\VC++(10)\app\app\app.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:05.69
