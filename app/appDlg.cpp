@@ -200,7 +200,7 @@ void CappDlg::OnBnClickedButton1()
 	   nRes = MessageBox(_T("未检测到卡片"),_T("错误！"),MB_RETRYCANCEL|MB_ICONSTOP);
        if(IDCANCEL==nRes)
 	   return;
-       goto end;
+       //goto end1;
 	  }
 	 if(status==1)
 	 {
@@ -227,11 +227,10 @@ void CappDlg::OnBnClickedButton1()
   }
   else
   {
-	 nok+=1;
      nRes = MessageBox(_T("卡片复位失败"),_T("错误！"),MB_RETRYCANCEL|MB_ICONSTOP);
      if(IDCANCEL==nRes)
 	  return;
-      goto end;
+      goto end1;
  
   }
   
@@ -241,11 +240,11 @@ void CappDlg::OnBnClickedButton1()
    res=swr_1608(icdev,0,0,7,data);
    if(res!=0)
    {
-     nok+=1;
+   
      nRes = MessageBox(_T("写0用户区失败"),_T("错误！"),MB_RETRYCANCEL|MB_ICONSTOP);
      if(IDCANCEL==nRes)
 	  return;
-      goto end;
+      goto end1;
 
    }
 
@@ -267,11 +266,11 @@ void CappDlg::OnBnClickedButton1()
    }
    else{
     
-     nok+=1;
+     
      nRes = MessageBox(_T("读0用户区失败"),_T("错误！"),MB_RETRYCANCEL|MB_ICONSTOP);
      if(IDCANCEL==nRes)
 	  return;
-      goto end;
+      goto end1;
    
    }
   //对07区写口令进行校验
@@ -281,11 +280,10 @@ void CappDlg::OnBnClickedButton1()
   res = csc_1608(icdev,7,3,0,key);
   if(res!=0)
   {	   
-    nok++;
     nRes = MessageBox(_T("校验07区写口令失败"),_T("错误！"),MB_RETRYCANCEL|MB_ICONSTOP);
     if(IDCANCEL==nRes)
 	  return;
-      goto end;
+      goto end1;
 	rsct_1608(icdev,7,3,0,last_value);
 	str_valu.Format(_T("%x"),last_value[0]);
    }
@@ -309,8 +307,8 @@ void CappDlg::OnBnClickedButton1()
      str_info+=s3;
   } 
    str_info.Empty();
-  }
-  else nok++;
+  
+
   //记录成功的测试次数并打印
   m_ok+=1;
   ok+=1;
@@ -324,11 +322,29 @@ void CappDlg::OnBnClickedButton1()
 	 UpdateData(FALSE);
   //弹出成功提示框
   nRes = MessageBox(_T(" 第 ")+str_ok+_T(" 片测试通过"),_T("完成"),MB_OK|MB_ICONINFORMATION);
-  if(IDCANCEL==nRes)
+    if(IDCANCEL==nRes)
 	return;
-  goto end;
+    goto end;
+  }
+  else{
+  
+	  goto end1;
+	 
+  
+  
+  
+  }
 
-end: ;		
+
+
+
+end1:  nRes = MessageBox(_T(" 第 ")+str_ok+_T(" 片测试失败"),_T("错误"),MB_OK|MB_ICONSTOP);
+       if(IDCANCEL==nRes)
+	   return;
+      UpdateData(TRUE);
+	  m_nok+=1;
+	  UpdateData(FALSE); ;
+end: ;
 }
 
 
@@ -352,7 +368,7 @@ void CappDlg::OnBnClickedCheck1()
 	  ok = 0;
 	  nok = 0;
 	  //连接 读卡器
-	 icdev=ic_init(port,baud);
+	 icdev=ic_init(port,baud);          // 连接读卡器 icdev   handle类型  连接成功是 276  连接不成功则是其他值
 	 str_div.Format(_T("%d"),icdev);
 	 if(icdev<0)
 	  {
